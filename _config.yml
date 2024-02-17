@@ -1,6 +1,5 @@
 domain: iwoherka.github.io
-url: https://iwoherka.github.io
-baseurl: / 
+
 remote_theme: pages-themes/minimal@v0.2.0
 theme: jekyll-theme-minimal
 plugins:
