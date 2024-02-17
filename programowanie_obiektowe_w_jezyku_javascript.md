@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: "Programowanie obiektowe w języku JavaScript"
 permalink: /programowanie-javascript/
 remote_theme: pages-themes/minimal@v0.2.0
