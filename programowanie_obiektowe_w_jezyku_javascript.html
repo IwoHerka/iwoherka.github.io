@@ -8,17 +8,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <style>
-      .roboto-regular {
-      font-family: "Roboto", sans-serif;
-      font-weight: 400;
-      font-style: normal;
+      html {
+        scroll-behavior: smooth;
       }
+
+      .roboto-regular {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
       a:hover {
         color: #398dc6;
       }
+
       table, th, td {
-      border: 1px solid;
-      padding: 5px;
+        border: 1px solid;
+        padding: 5px;
       }
     </style>
     <script>
@@ -43,6 +49,11 @@
           </a>
         </div>
         <script>
+          if (localStorage.theme == 'dark') {
+            document.documentElement.classList.toggle('dark');
+          }
+        </script>
+        <script>
           document.getElementById('theme-toggle').addEventListener('click', function() {
             document.documentElement.classList.toggle('dark');
           
@@ -57,6 +68,8 @@
         </script>
         <hr class="mb-8">
         <h2 class="font-bold text-xl mb-4">Programowanie obiektowe w języku JavaScript (POWJSC)</h2>
+
+        <section id="opis">
         <h3 class="font-bold text-lg mb-4">
         <a href="#opis">1. Opis</a></h2>
         <p>
@@ -69,8 +82,10 @@
           Podstawowym tekstem/podręcznikiem jest <i><a href="https://javascript.info">The Modern JavaScript Tutorial</a></i>.
           Scieżka przedmiotu w stylu <i>roadmap.sh</i> znajduje się <i><a href="#">tutaj</a></i>.
         </p>
+        </section>
+        <section id="zagadnienia">
         <h3 class="font-bold text-lg mb-4 mt-4">
-        <a href="#opis">2. Główne zagadnienia</a></h2>
+        <a href="#zagadnienia">2. Główne zagadnienia</a></h2>
         <p>
         <ul class="list-disc ps-5">
           <li>Wprowadzenie, cechy języka, historia, ekosystem, uruchamianie</li>
@@ -90,6 +105,8 @@
           <li>Zagadnienia uzupełniające</li>
         </ul>
         </p>
+        </section>
+        <section id="faq">
         <h3 class="font-bold text-lg mb-2 mt-4">
         <a href="#faq">3. FAQ (często zadawane pytania)</a></h2>
         <ul class="list-disc ps-5">
@@ -116,7 +133,7 @@
             </p>
           </li>
           <li class="mt-4">
-            <a href="#forma-zaliczenia">Jak wygląda egzamin/zaliczenie?</a>
+            <p>Jak wygląda egzamin/zaliczenie?</p>
             <p class="mt-4">
               Egzamin or zaliczenie składają się z <b>dwóch</b> testów przeprowadzonych na platformie Microsoft Teams. 
               Każdy test składa się z 30-60 pytań w formie zamkniętej (jednokrotnego lub wielokrotnego wyboru)
@@ -157,68 +174,72 @@
           </li>
 
           <li class="mt-4">
-            <a href="#forma-zaliczenia">Czy sprawdzane są obecności?</a>
+            <p>Czy sprawdzane są obecności?</p>
             <p>Nie.</p>
           </li>
 
           <li class="mt-4">
-            <a href="#forma-zaliczenia">Czy spotkania są nagrywane?</a>
+            <p>Czy spotkania są nagrywane?</p>
             <p>Tak, nagrania z wykładów i ćwiczeń znajdują się w zakładce z plikami na kanale grupy.</p>
           </li>
         </ul>
+        </section>
         <h2 class="font-bold text-lg mt-4 mb-4"><a href="#notatki">4. Notatki z wykładów</a></h2>
 
-        <h3 class="font-bold text-md mt-2">1. Wprowadzenie, cechy języka, historia, ekosystem, uruchamianie</h3>
+        <section id="notatki">
+          <h3 class="font-bold text-md mt-2">1. Wprowadzenie, cechy języka, historia, ekosystem, uruchamianie</h3>
 
-        <p class="mt-2">Pytania</p>
+          <p class="mt-2">Pytania</p>
 
-        <p>
-          <ul class="list-disc ps-5">
-          <li>Jakie są cechy języka?</li>
-        	<li>Jak powstał i do czego służy?</li>
-        	<li>Jakie są wersje języka, kto je ustala?</li>
-        	<li>Jak uruchamiać JavaScript?</li>
-        	<li>Jakie są różnice między frontendem a backendem w kontekście JS?</li>
-        	<li>Jak korzystać z dokumentacji, jak się uczyć?</li>
+          <p>
+            <ul class="list-disc ps-5">
+            <li>Jakie są cechy języka?</li>
+          	<li>Jak powstał i do czego służy?</li>
+          	<li>Jakie są wersje języka, kto je ustala?</li>
+          	<li>Jak uruchamiać JavaScript?</li>
+          	<li>Jakie są różnice między frontendem a backendem w kontekście JS?</li>
+          	<li>Jak korzystać z dokumentacji, jak się uczyć?</li>
+            </ul>
+          </p>
+
+          <p class="mt-2">Kluczowe terminy</p>
+
+          <p>
+            <ul class="list-disc ps-5">
+            <li>Kompilacja JIT</li>
+            <li>Rodzaje typowań (dynamiczne/statyczne, silne/słabe)</li>
+            <li>ECMAScript</li>
+            <li>MDN</li>
+            <li>Konsola deweloperska</li>
+            <li>Node.js, REPL</li>
+            <li>Frontend, backend</li>
+            </ul>
+          </p>
+
+          <p class="mt-2">Linki</p>
+          <p>
+            <ul class="list-disc ps-5">
+              <li><a href="#">StackOverflow Developer Survey 2023</a></li>
+              <li><a href="https://roadmap.sh/guides/history-of-javascript">Brief History of JavaScript</a></li>
+              <li><a href="https://www.educative.io/blog/javascript-versions-history">JavaScript Versions: How JavaScript has changed over the years</a></li>
+              <li><a href="https://dev.to/iarchitsharma/the-history-of-javascript-5e98">The History of JavaScript</a></li>
+              <li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-developer-console">How to Use JavaScript Developer Console</a></li>
+            </ul>
+          </p>
+        </section>
+
+        <section id="materialy">
+          <h2 class="font-bold text-lg mt-4 mb-4"><a href="#materialy">5. Materiały i dokumentacja</a></h2>
+
+          <ul class="list-disc ps-5 mb-24">
+            <li><a href="#">Dokumentacja MDN</a></li>
+            <li><a href="#">Ścieżka przedmiotu @ roadmap.sh</a></li>
+            <li><a href="#">Ścieżka JavaScript @ roadmap.sh</a></li>
+            <li><a href="#">Ścieżka Frontend @ roadmap.sh</a></li>
+            <li><a href="#">Eloquent JavaScript (książka)</a></li>
+            <li><a href="#">Codeguage JavaScript (kurs)</a></li>
           </ul>
-        </p>
-
-        <p class="mt-2">Kluczowe terminy</p>
-
-        <p>
-          <ul class="list-disc ps-5">
-          <li>Kompilacja JIT</li>
-          <li>Rodzaje typowań (dynamiczne/statyczne, silne/słabe)</li>
-          <li>ECMAScript</li>
-          <li>MDN</li>
-          <li>Konsola deweloperska</li>
-          <li>Node.js, REPL</li>
-          <li>Frontend, backend</li>
-          </ul>
-        </p>
-
-        <p class="mt-2">Linki</p>
-
-        <p>
-          <ul class="list-disc ps-5">
-            <li><a href="#">StackOverflow Developer Survey 2023</a></li>
-            <li><a href="https://roadmap.sh/guides/history-of-javascript">Brief History of JavaScript</a></li>
-            <li><a href="https://www.educative.io/blog/javascript-versions-history">JavaScript Versions: How JavaScript has changed over the years</a></li>
-            <li><a href="https://dev.to/iarchitsharma/the-history-of-javascript-5e98">The History of JavaScript</a></li>
-            <li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-developer-console">How to Use JavaScript Developer Console</a></li>
-          </ul>
-        </p>
-
-        <h2 class="font-bold text-lg mt-4 mb-4"><a href="#materialy">5. Materiały i dokumentacja</a></h2>
-
-        <ul class="list-disc ps-5 mb-24">
-          <li><a href="#">Dokumentacja MDN</a></li>
-          <li><a href="#">Ścieżka przedmiotu @ roadmap.sh</a></li>
-          <li><a href="#">Ścieżka JavaScript @ roadmap.sh</a></li>
-          <li><a href="#">Ścieżka Frontend @ roadmap.sh</a></li>
-          <li><a href="#">Eloquent JavaScript (książka)</a></li>
-          <li><a href="#">Codeguage JavaScript (kurs)</a></li>
-        </ul>
+        </section>
       </div>
     </div>
   </body>
